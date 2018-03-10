@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MS SQL Server Quiz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap4.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="myGrid">
+  <div class="row row-1">
+    <div class="col-xs-12 col-xl-12">
+
+    <!-- Main wrapper for all content divs -->
+      <div class="container-fluid master-wrapper">
+        <div class="subgrid">
+          <div class="row">
+            <div class="col-xs-12 subgrid-column-1 col-xl-12">
+              <h1 class="heading-1">MS SQL Server Quiz</h1>
+
+              <!-- Start Div -->
+              <div class="container-fluid start-div" id="startDiv">
+                <button type="button" class="btn" id="startBtn">Start Quiz Game</button>
+              </div>
+
+              <!-- Questions  -->
+              <div class="container-fluid start-div hide" id="questionsDiv">
+                <h2 class="red">Time Remaining:&nbsp
+                  <span id="time_span">120 Seconds</span>
+                </h2>
+                <hr>
+                <form>
+                  <h4>How can you support the SELECT clause of a query by using a nonclustered index that is already used for
+                    the WHERE clause?
+                  </h4>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ1" value="A">&nbsp;You could use SELECT *.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ1" value="B">&nbsp;You could modify the index that is already used to include the columns from the select list that
+                    are not part of the key.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ1" value="C">&nbsp;You could add column aliases.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ1" value="D">&nbsp;There is no way to support the SELECT clause with indexes
+                  </div>
+
+                  <hr>
+                  <h4>Where does SQL Server sort the data, if a sort is needed?
+                  </h4>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ2" value="A">&nbsp;In the current database
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ2" value="B">&nbsp;In the master database
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ2" value="C">&nbsp;In the msdb database
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ2" value="D">&nbsp;SQL Server sorts data in memory, or spills the data to tempdb if it does not fit in memory
+                  </div>
+
+                  <hr>
+                  <h4>Why are window functions allowed only in the SELECT and ORDER BY clauses of a query?
+                  </h4>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ3" value="A">&nbsp;Because they are supposed to operate on the underlying query’s result, which is achieved when logical
+                    query processing gets to the SELECT phase.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ3" value="B">&nbsp;Because Microsoft didn’t have time to implement them in other clauses.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ3" value="C">&nbsp;Because you never need to filter or group data based on the result of window functions.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ3" value="D">&nbsp;Because in the other clauses, the functions are considered door functions (also known as backdoor
+                    functions)
+                  </div>
+
+                  <hr>
+                  <h4>How can you turn off nested triggers on a SQL Server Instance by using T-SQL?
+                  </h4>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ4" value="A">&nbsp;Use the sp_configure stored procedure follwed by 'nested triggers' and 'OFF'.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ4" value="B">&nbsp;Use the sp_configure stored procedure followed by 'nested triggers' and 0.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ4" value="C">&nbsp;Use the sp_configure stored procedure followed by 'nested triggers' and 'OFF', followed by the
+                    RECONFIGURE statement.
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ4" value="D">&nbsp;Use the sp_configure stored procedure followed by 'nested triggers' and 0, followed by the RECONFIGURE
+                    statement.
+                  </div>
+
+                  <hr>
+                  <h4>Can you have indexes on table variables?
+                  </h4>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ5" value="A">&nbsp;No
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ5" value="B">&nbsp;Yes, by running the CREATE INDEX command
+                  </div>
+                  <div class="radio">
+                    <input type="radio" name="rbtnQ5" value="C">&nbsp;Yes, indirectly by defining primary key and unique constraints
+                  </div>
+                  <div class="radio">
+                    <input type="radio"="rbtnQ5" value="D">&nbsp;Yes, by defining foreign keys
+                  </div>
+                  <hr>
+                  <div class="col-xs-12">
+                    <button type="button" id="finished" class="btn">Done</button>
+                </form>
+                </div>
+              </div>
+
+
+              <!-- Summary Div -->
+              <div class="container-fluid start-div hide" id="gamesummaryDiv">
+                <h2 class="h2-centered">All Done!</h2>
+                <p class="paragraph summary-paragraph">Correct Answers: <span id ="correct"> 0</span></p>
+                <p class="paragraph summary-paragraph">Incorrect Answers: <span id="incorrect"> 0</span></p>
+                <p class="paragraph summary-paragraph">Unanswered: <span id="unanswered">0</span></p>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/logic.js"></script>
+</body>
+
+</html>
