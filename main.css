@@ -1,0 +1,83 @@
+/* Text Elements */
+
+.row {
+  background-color: rgba(255, 255, 255, 0);
+  margin: 0 auto;
+  border: none
+}
+h1.heading-1 {
+  color: #000080;
+  text-align: center;
+}
+h2.h2-centered {
+  text-align: center;
+}
+p.paragraph.summary-paragraph {
+  text-align: center;
+}
+.red {
+  color: red;
+}
+.hide {
+  display: none;
+}
+/* Interaction Elements */
+
+button.btn {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 330px;
+  border-width: .125rem;
+  border-color: #fc0000;
+  color: #0072c6;
+  font-size: 25px;
+}
+/* Layout Elements */
+
+body.myGrid {
+  background-image: url('../images/Server-hero-sql.jpg');
+  background-attachment: scroll;
+  background-position: left top;
+  background-clip: border-box;
+  background-origin: padding-box;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-blend-mode: normal;
+}
+.row.row-1 {
+  max-width: 986px;
+}
+.subgrid-column-1 {
+  padding-top: 40px;
+}
+.master-wrapper {
+  margin-top: 100px;
+  padding-top: 0;
+  background-color: #fff;
+}
+/*Media queries*/
+
+@media screen and (min-width: 36rem) {
+  button.btn {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width: 48rem) {
+  button.btn {
+    margin-right: 0;
+    margin-left: 300px;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  /* Text Elements */
+
+  h1.heading-1 {
+    text-align: center;
+  }
+
+  .start-div {
+    margin-left: 0;
+  }
+}
